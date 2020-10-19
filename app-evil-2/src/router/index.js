@@ -14,40 +14,40 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '',
+    path: 'https://mayr-katarn.github.io/mayrkatarn.pages/app-evil-2/',
     name: 'home',
     component: Home
   },
   {
-    path: '/evil/:id',
+    path: 'https://mayr-katarn.github.io/mayrkatarn.pages/app-evil-2/evil/:id',
     props: true,
     name: 'evil',
     component: Evil
   },
   {
-    path: '/list',
+    path: 'https://mayr-katarn.github.io/mayrkatarn.pages/app-evil-2/list',
     name: 'list',
     component: EvilList,
     beforeEnter: AuthGuard
   },
   {
-    path: '/new',
+    path: 'https://mayr-katarn.github.io/mayrkatarn.pages/app-evil-2/new',
     name: 'new',
     component: NewEvil,
     beforeEnter: AuthGuard
   },
   {
-    path: '/login',
+    path: 'https://mayr-katarn.github.io/mayrkatarn.pages/app-evil-2/login',
     name: 'login',
     component: Login
   },
   {
-    path: '/registration',
+    path: 'https://mayr-katarn.github.io/mayrkatarn.pages/app-evil-2/registration',
     name: 'registration',
     component: Registration
   },
   {
-    path: '/orders',
+    path: 'https://mayr-katarn.github.io/mayrkatarn.pages/app-evil-2/orders',
     name: 'orders',
     component: Orders,
     beforeEnter: AuthGuard

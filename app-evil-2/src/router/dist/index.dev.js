@@ -30,34 +30,34 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 _vue["default"].use(_vueRouter["default"]);
 
 var routes = [{
-  path: '',
+  path: 'https://mayr-katarn.github.io/mayrkatarn.pages/app-evil-2/',
   name: 'home',
   component: _Home["default"]
 }, {
-  path: '/evil/:id',
+  path: 'https://mayr-katarn.github.io/mayrkatarn.pages/app-evil-2/evil/:id',
   props: true,
   name: 'evil',
   component: _Evil["default"]
 }, {
-  path: '/list',
+  path: 'https://mayr-katarn.github.io/mayrkatarn.pages/app-evil-2/list',
   name: 'list',
   component: _EvilList["default"],
   beforeEnter: _authGuard["default"]
 }, {
-  path: '/new',
+  path: 'https://mayr-katarn.github.io/mayrkatarn.pages/app-evil-2/new',
   name: 'new',
   component: _NewEvil["default"],
   beforeEnter: _authGuard["default"]
 }, {
-  path: '/login',
+  path: 'https://mayr-katarn.github.io/mayrkatarn.pages/app-evil-2/login',
   name: 'login',
   component: _Login["default"]
 }, {
-  path: '/registration',
+  path: 'https://mayr-katarn.github.io/mayrkatarn.pages/app-evil-2/registration',
   name: 'registration',
   component: _Registration["default"]
 }, {
-  path: '/orders',
+  path: 'https://mayr-katarn.github.io/mayrkatarn.pages/app-evil-2/orders',
   name: 'orders',
   component: _Orders["default"],
   beforeEnter: _authGuard["default"]

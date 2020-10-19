@@ -13,6 +13,6 @@ function _default(to, from, next) {
   if (_store["default"].getters.user) {
     next();
   } else {
-    next('/login?loginError=true');
+    next('https://mayr-katarn.github.io/mayrkatarn.pages/app-evil-2/login?loginError=true');
   }
 }
