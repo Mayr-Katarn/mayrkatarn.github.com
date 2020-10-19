@@ -48,7 +48,7 @@
         ></v-app-bar-nav-icon>
 
         <v-toolbar-title>
-          <router-link to="https://mayr-katarn.github.io/mayrkatarn.pages/app-evil-2" tag="span" class="pointer">Looking for Evils</router-link>
+          <router-link to="https://mayr-katarn.github.io/mayrkatarn.pages/app-evil-2/" tag="span" class="pointer">Looking for Evils</router-link>
         </v-toolbar-title>
         <v-spacer></v-spacer>
         <v-btn 
@@ -131,15 +131,15 @@ export default {
     links () {
       if (this.isUserLoggetIn) {
         return [
-          {title: 'Orders', icon: 'mdi-timeline-check-outline', url: 'https://mayr-katarn.github.io/mayrkatarn.pages/app-evil-2/orders'},
-          {title: 'New Evil', icon: 'mdi-flask-empty-plus-outline', url: 'https://mayr-katarn.github.io/mayrkatarn.pages/app-evil-2/new'},
-          {title: 'My Evil', icon: 'mdi-cat', url: 'https://mayr-katarn.github.io/mayrkatarn.pages/app-evil-2/list'}
+          {title: 'Orders', icon: 'mdi-timeline-check-outline', url: '/orders'},
+          {title: 'New Evil', icon: 'mdi-flask-empty-plus-outline', url: '/new'},
+          {title: 'My Evil', icon: 'mdi-cat', url: '/list'}
         ]
       }
 
       return [
-        {title: 'Login', icon: 'mdi-lock', url: 'https://mayr-katarn.github.io/mayrkatarn.pages/app-evil-2/login'},
-        {title: 'Registation', icon: 'mdi-account-plus-outline', url: 'https://mayr-katarn.github.io/mayrkatarn.pages/app-evil-2/registration'}
+        {title: 'Login', icon: 'mdi-lock', url: '/login'},
+        {title: 'Registation', icon: 'mdi-account-plus-outline', url: '/registration'}
       ]
     }
   },
@@ -154,7 +154,7 @@ export default {
     },
     onLogout () {
       this.$store.dispatch('logoutUser')
-      this.$router.push('https://mayr-katarn.github.io/mayrkatarn.pages/app-evil-2/')
+      this.$router.push('/')
     }
   }
 }

@@ -31,7 +31,7 @@
 
 							<v-card-actions>
 								<v-spacer></v-spacer>
-								<v-btn color="info" class="mr-3" :to="'https://mayr-katarn.github.io/mayrkatarn.pages/app-evil-2/evil/' + evil.id">Open</v-btn>
+								<v-btn color="info" class="mr-3" :to="'/evil/' + evil.id">Open</v-btn>
 							</v-card-actions>
 						</v-flex>
 

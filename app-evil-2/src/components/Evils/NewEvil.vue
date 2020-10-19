@@ -89,7 +89,7 @@ export default {
 				}
 				this.$store.dispatch('newEvil', evil)
 				.then(() => {
-					this.$router.push('https://mayr-katarn.github.io/mayrkatarn.pages/app-evil-2/list')
+					this.$router.push('/list')
 				})
 				.catch(() => {})
 			}

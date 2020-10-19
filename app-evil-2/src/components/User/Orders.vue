@@ -29,7 +29,7 @@
 									<v-list-item-subtitle>{{ order.task }}</v-list-item-subtitle>
 								</v-list-item-content>
 								<v-list>
-									<v-btn color="primary" :to="'https://mayr-katarn.github.io/mayrkatarn.pages/app-evil-2/evil/' + order.evilId">Open</v-btn>
+									<v-btn color="primary" :to="'/evil/' + order.evilId">Open</v-btn>
 								</v-list>
 							</template>
 						</v-list-item>

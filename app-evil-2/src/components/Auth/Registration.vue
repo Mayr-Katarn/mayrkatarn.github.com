@@ -95,7 +95,7 @@ export default {
           }
           this.$store.dispatch('registerUser', user)
           .then(() => {
-            this.$router.push('https://mayr-katarn.github.io/mayrkatarn.pages/app-evil-2/')
+            this.$router.push('/')
           })
           .catch(()=> {})
         }
