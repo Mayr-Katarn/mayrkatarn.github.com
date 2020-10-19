@@ -1,6 +1,6 @@
 # vue_simon_game
 
-> A Vue.js project
+> The Simon game
 
 ## Build Setup
 
