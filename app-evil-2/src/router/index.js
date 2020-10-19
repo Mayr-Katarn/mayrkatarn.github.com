@@ -14,40 +14,40 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path: 'https://mayr-katarn.github.io/mayrkatarn.pages/app-evil-2/',
+    path: '/mayrkatarn.pages/app-evil-2/',
     name: 'home',
     component: Home
   },
   {
-    path: 'https://mayr-katarn.github.io/mayrkatarn.pages/app-evil-2/evil/:id',
+    path: '/mayrkatarn.pages/app-evil-2/evil/:id',
     props: true,
     name: 'evil',
     component: Evil
   },
   {
-    path: 'https://mayr-katarn.github.io/mayrkatarn.pages/app-evil-2/list',
+    path: '/mayrkatarn.pages/app-evil-2/list',
     name: 'list',
     component: EvilList,
     beforeEnter: AuthGuard
   },
   {
-    path: 'https://mayr-katarn.github.io/mayrkatarn.pages/app-evil-2/new',
+    path: '/mayrkatarn.pages/app-evil-2/new',
     name: 'new',
     component: NewEvil,
     beforeEnter: AuthGuard
   },
   {
-    path: 'https://mayr-katarn.github.io/mayrkatarn.pages/app-evil-2/login',
+    path: '/mayrkatarn.pages/app-evil-2/login',
     name: 'login',
     component: Login
   },
   {
-    path: 'https://mayr-katarn.github.io/mayrkatarn.pages/app-evil-2/registration',
+    path: '/mayrkatarn.pages/app-evil-2/registration',
     name: 'registration',
     component: Registration
   },
   {
-    path: 'https://mayr-katarn.github.io/mayrkatarn.pages/app-evil-2/orders',
+    path: '/mayrkatarn.pages/app-evil-2/orders',
     name: 'orders',
     component: Orders,
     beforeEnter: AuthGuard

@@ -10,7 +10,7 @@
               :src="evil.imageSrc"
             >
             <div class="carousel-link">
-              <v-btn class="error" :to="'/evil/' + evil.id">{{ evil.title }}</v-btn>
+              <v-btn class="error" :to="'/mayrkatarn.pages/app-evil-2/evil/' + evil.id">{{ evil.title }}</v-btn>
             </div>
             </v-carousel-item>
           </v-carousel>
@@ -52,7 +52,7 @@
               
               <v-btn
                 depressed
-                :to="'/evil/' + evil.id"
+                :to="'/mayrkatarn.pages/app-evil-2/evil/' + evil.id"
               >
                 More info
               </v-btn>
