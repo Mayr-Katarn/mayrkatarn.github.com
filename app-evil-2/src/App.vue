@@ -133,7 +133,7 @@ export default {
         return [
           {title: 'Orders', icon: 'mdi-timeline-check-outline', url: '/mayrkatarn.pages/app-evil-2/orders'},
           {title: 'New Evil', icon: 'mdi-flask-empty-plus-outline', url: '/mayrkatarn.pages/app-evil-2/new'},
-          {title: 'My Evil', icon: 'mdi-cat', url: '/list'}
+          {title: 'My Evil', icon: 'mdi-cat', url: '/mayrkatarn.pages/app-evil-2/list'}
         ]
       }
 
