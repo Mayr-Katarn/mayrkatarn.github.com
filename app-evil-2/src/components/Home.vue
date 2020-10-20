@@ -3,7 +3,7 @@
     <v-container fluid>
       <v-layout row>
         <v-flex xs12>
-          <v-carousel v-model="model">
+          <v-carousel cycle>
             <v-carousel-item
               v-for="evil of promos"
               :key="evil.id"
@@ -90,12 +90,6 @@ export default {
     },
     loading () {
       return this.$store.getters.loading
-    }
-  },
-  
-  data () {
-    return {
-      model: 0      
     }
   }
 }

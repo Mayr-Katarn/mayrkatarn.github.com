@@ -23,7 +23,7 @@ var User = function User(id) {
 
 var _default = {
   state: {
-    user: null
+    user: ''
   },
   mutations: {
     setUser: function setUser(state, payload) {
@@ -32,7 +32,7 @@ var _default = {
   },
   actions: {
     registerUser: function registerUser(_ref, _ref2) {
-      var commit, email, password, user;
+      var commit, email, password, fbUser;
       return regeneratorRuntime.async(function registerUser$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
@@ -46,9 +46,9 @@ var _default = {
               return regeneratorRuntime.awrap(fb.auth().createUserWithEmailAndPassword(email, password));
 
             case 7:
-              user = _context.sent;
+              fbUser = _context.sent;
               // uid
-              commit('setUser', new User(user.uid));
+              commit('setUser', new User(fbUser.user.uid));
               commit('setLoading', false);
               _context.next = 17;
               break;
@@ -68,7 +68,7 @@ var _default = {
       }, null, null, [[4, 12]]);
     },
     loginUser: function loginUser(_ref3, _ref4) {
-      var commit, email, password, user;
+      var commit, email, password, fbUser;
       return regeneratorRuntime.async(function loginUser$(_context2) {
         while (1) {
           switch (_context2.prev = _context2.next) {
@@ -82,9 +82,9 @@ var _default = {
               return regeneratorRuntime.awrap(fb.auth().signInWithEmailAndPassword(email, password));
 
             case 7:
-              user = _context2.sent;
+              fbUser = _context2.sent;
               // uid
-              commit('setUser', new User(user.uid));
+              commit('setUser', new User(fbUser.user.uid));
               commit('setLoading', false);
               _context2.next = 17;
               break;
@@ -110,7 +110,7 @@ var _default = {
     logoutUser: function logoutUser(_ref6) {
       var commit = _ref6.commit;
       fb.auth().signOut();
-      commit('setUser', null);
+      commit('setUser', '');
     }
   },
   getters: {
@@ -118,7 +118,7 @@ var _default = {
       return state.user;
     },
     isUserLoggetIn: function isUserLoggetIn(state) {
-      return state.user !== null;
+      return state.user !== '';
     }
   }
 };

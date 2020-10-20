@@ -80,7 +80,7 @@ export default {
           name: this.name,
           contact: this.contact,
           evilId: this.evil.id,
-          ownerId: this.ownerId
+          ownerId: this.evil.ownerId
         })
         .finally(() => {
           this.name = ''

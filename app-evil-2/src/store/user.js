@@ -8,7 +8,7 @@ class User {
 
 export default {
   state: {
-    user: null
+    user: ''
   },
   mutations: {
     setUser (state, payload) {
@@ -21,9 +21,9 @@ export default {
       commit('setLoading', true)
       
       try {
-        const user = await fb.auth().createUserWithEmailAndPassword(email, password)
+        const fbUser = await fb.auth().createUserWithEmailAndPassword(email, password)
         // uid
-        commit('setUser', new User(user.uid))
+        commit('setUser', new User(fbUser.user.uid))
         commit('setLoading', false)
       } catch (error) {
         commit('setLoading', false)
@@ -36,9 +36,9 @@ export default {
       commit('setLoading', true)
       
       try {
-        const user = await fb.auth().signInWithEmailAndPassword(email, password)
+        const fbUser = await fb.auth().signInWithEmailAndPassword(email, password)
         // uid
-        commit('setUser', new User(user.uid))
+        commit('setUser', new User(fbUser.user.uid))
         commit('setLoading', false)
       } catch (error) {
         commit('setLoading', false)
@@ -51,7 +51,7 @@ export default {
     },
     logoutUser ({commit}) {
       fb.auth().signOut()
-      commit('setUser', null)
+      commit('setUser', '')
     }
   },
   getters: {
@@ -59,7 +59,7 @@ export default {
       return state.user
     },
     isUserLoggetIn (state) {
-      return state.user !== null
+      return state.user !== ''
     }
   }
 }

@@ -36,9 +36,9 @@
       </v-list>
     </v-navigation-drawer>
 
-    <v-app-bar app color='blue'>
+    <v-app-bar app color='primary'>
       <v-toolbar
-        color='blue'
+        color='primary'
         dark
         flat
       >
@@ -154,7 +154,9 @@ export default {
     },
     onLogout () {
       this.$store.dispatch('logoutUser')
-      this.$router.push('/mayrkatarn.pages/app-evil-2/')
+      if (this.$route.path !== '/mayrkatarn.pages/app-evil-2/') {
+        this.$router.push('/mayrkatarn.pages/app-evil-2/')
+      }
     }
   }
 }
