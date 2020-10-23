@@ -37,14 +37,14 @@
         <button @click="typeNumber(numbers[4])" type="button" class="btn btn-dark btn-lg">4</button>
         <button @click="typeNumber(numbers[5])" type="button" class="btn btn-dark btn-lg">5</button>
         <button @click="typeNumber(numbers[6])" type="button" class="btn btn-dark btn-lg">6</button>
-        <button type="button" class="btn btn-dark btn-lg">-</button>
+        <button @click="calcOperation('-')" type="button" class="btn btn-dark btn-lg">-</button>
       </div>
 
       <div class="row">
         <button @click="typeNumber(numbers[1])" type="button" class="btn btn-dark btn-lg">1</button>
         <button @click="typeNumber(numbers[2])" type="button" class="btn btn-dark btn-lg">2</button>
         <button @click="typeNumber(numbers[3])" type="button" class="btn btn-dark btn-lg">3</button>
-        <button @click="addition" type="button" class="btn btn-dark btn-lg">+</button>
+        <button @click="calcOperation('+')" type="button" class="btn btn-dark btn-lg">+</button>
       </div>
 
       <div class="row">
@@ -71,12 +71,21 @@ export default {
     }
   },
   methods: {
+    updateResult() {
+      if (this.lastAction === '+') {
+        this.current = this.display
+        this.result = +this.safeResult + +this.current
+      }
+      if (this.lastAction === '-') {
+        this.current = this.display
+        this.result = +this.safeResult - +this.current
+      }
+    },
     typeNumber(number) {
       if (this.display.length < 20) {
         this.display += number
-        if (this.lastAction === '+') {
-          this.current = this.display
-          this.result = +this.safeResult + +this.current
+        if (this.lastAction) {
+          this.updateResult()
         }
       }
     },
@@ -85,11 +94,11 @@ export default {
         this.display = this.result
       }
     },
-    addition() {
+    calcOperation(action) {
       if (this.display) {
         this.current = this.display
         this.display = ''
-        this.lastAction = '+'
+        this.lastAction = action
         if (!this.result) {
           this.safeResult = this.result = this.current
         } else {
@@ -101,8 +110,8 @@ export default {
       if (this.display) {
         this.display = this.display.toString()
         this.display = this.display.slice(0, -1)
-        if (this.current) {
-          this.current = this.display
+        if (this.lastAction) {
+          this.updateResult()
         }
       }
     },
