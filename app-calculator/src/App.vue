@@ -92,12 +92,18 @@ export default {
         this.lastAction = '+'
         if (!this.result) {
           this.safeResult = this.result = this.current
+        } else {
+          this.safeResult = this.result
         }
       }
     },
     backspace() {
       if (this.display) {
+        this.display = this.display.toString()
         this.display = this.display.slice(0, -1)
+        if (this.current) {
+          this.current = this.display
+        }
       }
     },
     clear() {
