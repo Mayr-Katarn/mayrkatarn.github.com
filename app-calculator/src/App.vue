@@ -72,25 +72,28 @@ export default {
       current: '', // текущее число для вычислений
       result: '', // результат
       safeResult: '', // сохраненный результат (нужен для корректных вычислений при наборе цифр)
-      lastAction: '' // последнее использованное арифметическое действие
+      lastAction: { // последнее использованное арифметическое действие и проверка на нажатую цифру
+        operator: '',
+        isNumber: false
+      },
     }
   },
   methods: {
     // обновляет результат в зависимости от последнего арефметического действия
     updateResult() {
-      if (this.lastAction === '+') {
+      if (this.lastAction.operator === '+') {
         this.current = this.display
         this.result = +this.safeResult + +this.current
       }
-      if (this.lastAction === '-') {
+      if (this.lastAction.operator === '-') {
         this.current = this.display
         this.result = +this.safeResult - +this.current
       }
-      if (this.lastAction === '*') {
+      if (this.lastAction.operator === '*') {
         this.current = this.display
         this.result = +this.safeResult * +this.current
       }
-      if (this.lastAction === '/') {
+      if (this.lastAction.operator === '/') {
         this.current = this.display
         this.result = +this.safeResult / +this.current
       }
@@ -98,8 +101,15 @@ export default {
     // нажатие на цифровую кнопку
     typeNumber(number) {
       if (this.display.length < 20) {
-        this.display += number
-        if (this.lastAction) {
+        if (!this.lastAction.isNumber) {
+          this.display = ''
+          this.display += number
+          this.lastAction.isNumber = true
+        } else {
+          this.lastAction.isNumber = true
+          this.display += number
+        }
+        if (this.lastAction.operator) {
           this.updateResult()
         }
       }
@@ -111,6 +121,7 @@ export default {
           this.display += '.'
         } else {
           this.display += '0.'
+          this.lastAction.isNumber = true
         }
       }
     },
@@ -124,13 +135,14 @@ export default {
     calcOperation(action) {
       if (this.display) {
         this.current = this.display
-        this.display = ''
-        this.lastAction = action
+        this.lastAction.operator = action
+        this.lastAction.isNumber = false
         if (!this.result) {
           this.safeResult = this.result = this.current
         } else {
           this.safeResult = this.result
         }
+        this.display = this.safeResult
       }
     },
     // удаляет последнюю набранную цифру\точку на дисплее
@@ -138,7 +150,7 @@ export default {
       if (this.display) {
         this.display = this.display.toString()
         this.display = this.display.slice(0, -1)
-        if (this.lastAction) {
+        if (this.lastAction.operator) {
           this.updateResult()
         }
       }
@@ -148,6 +160,8 @@ export default {
       if (this.display) {
         this.display = ''
         this.current = ''
+        this.lastAction.isNumber = false
+
       }
     },
     // полный сброс
@@ -156,7 +170,8 @@ export default {
       this.current = ''
       this.result = ''
       this.safeResult = ''
-      this.lastAction = ''
+      this.lastAction.operator = ''
+      this.lastAction.isNumber = false
     }
   }
 }
