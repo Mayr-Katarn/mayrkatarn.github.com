@@ -1,6 +1,7 @@
 # vue_simon_game
 
 > The Simon game
+
 > https://mayr-katarn.github.io/mayrkatarn.pages/simon/
 
 ## Build Setup

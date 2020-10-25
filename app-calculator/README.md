@@ -1,6 +1,7 @@
 # app-calculator
 
 > Simple office calculator
+
 > https://mayr-katarn.github.io/mayrkatarn.pages/app-calc/
 
 ## Project setup

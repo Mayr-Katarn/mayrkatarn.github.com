@@ -1,4 +1,4 @@
 # mayrkatarn.pages
-Apps by Alexey Belikov
+> Apps by Alexey Belikov
 
-https://mayr-katarn.github.io/mayrkatarn.pages/
+> https://mayr-katarn.github.io/mayrkatarn.pages/
