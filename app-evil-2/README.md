@@ -1,7 +1,7 @@
 # app-evil-2
 
 > Looking for some Evils?
-https://mayr-katarn.github.io/mayrkatarn.pages/app-evil-2/
+Page: https://mayr-katarn.github.io/mayrkatarn.pages/app-evil-2/
 
 ## Project setup
 ```
