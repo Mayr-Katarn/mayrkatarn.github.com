@@ -84,34 +84,41 @@ export default {
       if (this.lastAction.operator === '+') {
         this.current = this.display
         this.result = +this.safeResult + +this.current
+        this.result = this.result.toString()
       }
       if (this.lastAction.operator === '-') {
         this.current = this.display
         this.result = +this.safeResult - +this.current
+        this.result = this.result.toString()
       }
       if (this.lastAction.operator === '*') {
         this.current = this.display
         this.result = +this.safeResult * +this.current
+        this.result = this.result.toString()
       }
       if (this.lastAction.operator === '/') {
         this.current = this.display
         this.result = +this.safeResult / +this.current
+        this.result = this.result.toString()
       }
     },
     // нажатие на цифровую кнопку
     typeNumber(number) {
-      if (this.display.length < 20) {
-        if (!this.lastAction.isNumber) {
-          this.display = ''
-          this.display += number
-          this.lastAction.isNumber = true
-        } else {
-          this.lastAction.isNumber = true
-          this.display += number
-        }
-        if (this.lastAction.operator) {
-          this.updateResult()
-        }
+      if (!this.lastAction.isNumber && this.display.length < 15) {
+        this.display = ''
+        this.display += number
+        this.lastAction.isNumber = true
+        console.log(this.display.length)
+      } else if (this.display.length === 15 && !this.lastAction.isNumber) {
+        this.display = ''
+        this.display += number
+        this.lastAction.isNumber = true
+      } else if (this.display.length < 15) {
+        this.lastAction.isNumber = true
+        this.display += number
+      }
+      if (this.lastAction.operator) {
+        this.updateResult()
       }
     },
     // нажатие на точку
@@ -128,7 +135,12 @@ export default {
     // получение результата при нажатии на '='
     getResult() {
       if (this.result) {
-        this.display = this.result
+        if (!this.lastAction.isNumber) {
+          this.updateResult()
+          this.display = this.result
+        } else {
+          this.display = this.result
+        }
       }
     },
     // нажатие на арифметическое действие
