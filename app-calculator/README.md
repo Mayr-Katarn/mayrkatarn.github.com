@@ -2,7 +2,7 @@
 
 > Simple office calculator
 
-> https://mayr-katarn.github.io/mayrkatarn.pages/app-calc/
+> https://mayr-katarn.github.io/mayrkatarn.pages/app-calculator/
 
 ## Project setup
 ```
