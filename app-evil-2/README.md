@@ -2,7 +2,7 @@
 
 > Looking for some Evils?
 
-Page: https://mayr-katarn.github.io/mayrkatarn.pages/app-evil-2/
+> https://mayr-katarn.github.io/mayrkatarn.pages/app-evil-2/
 
 ## Project setup
 ```
