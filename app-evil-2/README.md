@@ -1,6 +1,7 @@
 # app-evil-2
 
-Looking for some Evils?
+> Looking for some Evils?
+> https://mayr-katarn.github.io/mayrkatarn.pages/app-evil-2/
 
 ## Project setup
 ```
@@ -21,6 +22,3 @@ npm run build
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
