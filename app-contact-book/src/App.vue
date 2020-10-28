@@ -9,7 +9,11 @@
         color="#fcb69f"
         dark
         shrink-on-scroll
+<<<<<<< HEAD
         src="/src/assets/book.jpg"
+=======
+        src="./src/assets/book.jpg"
+>>>>>>> b197d8f0349785ff42b6730e69556b66d0933b79
       >
         <template v-slot:img="{ props }">
           <v-img
