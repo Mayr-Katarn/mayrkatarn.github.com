@@ -1,4 +1,4 @@
-# app-evil-2
+# app-contact-book
 
 > Sorted contact book with editing and searching by name and favorits contacts
 
