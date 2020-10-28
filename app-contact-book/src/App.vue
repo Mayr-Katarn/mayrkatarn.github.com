@@ -9,7 +9,7 @@
         color="#fcb69f"
         dark
         shrink-on-scroll
-        src="/app-contact-book/src/assets/book.jpg"
+        src="/mayrkatarn.pages/app-contact-book/src/assets/book.jpg"
       >
         <template v-slot:img="{ props }">
           <v-img
