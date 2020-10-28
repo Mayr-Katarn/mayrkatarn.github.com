@@ -37,7 +37,7 @@
           <v-btn
             color="primary"
             depressed
-            :to="'/contact/' + contact.id"
+            :to="'/mayrkatarn.pages/app-contact-book/contact/' + contact.id"
           >
             More Info
           </v-btn>
@@ -115,7 +115,7 @@
           <v-btn
             color="primary"
             depressed
-            :to="'/contact/' + contact.id"
+            :to="'/mayrkatarn.pages/app-contact-book/contact/' + contact.id"
           >
             More Info
           </v-btn>
@@ -193,7 +193,7 @@
           <v-btn
             color="primary"
             depressed
-            :to="'/contact/' + contact.id"
+            :to="'/mayrkatarn.pages/app-contact-book/contact/' + contact.id"
           >
             More Info
           </v-btn>

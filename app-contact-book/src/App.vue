@@ -98,8 +98,8 @@ export default {
   methods: {
     // return to contact book if methods of searching are used
     toBook() {
-      if (this.$route.fullPath !== '/') {
-        this.$router.push('/')
+      if (this.$route.fullPath !== '/mayrkatarn.pages/app-contact-book/') {
+        this.$router.push('/mayrkatarn.pages/app-contact-book/')
       }
     },
 
