@@ -65,7 +65,7 @@ export default {
   },
   methods: {
     onCancel () {
-      this.editedTitle = this.evil.title,
+      this.editedTitle = this.evil.title
       this.editedDescription = this.evil.description
       this.dialog = false
     },

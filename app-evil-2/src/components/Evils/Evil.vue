@@ -41,6 +41,7 @@ export default {
 	computed: {
 		evil () {
 			const id = this.id
+			console.log(id)
 			return this.$store.getters.evilById(id)
 		},
 		loading () {
