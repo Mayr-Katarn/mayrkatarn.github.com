@@ -19,7 +19,7 @@
         </template>
 
         <v-toolbar-title>
-          <router-link to="/" tag="span" class="pointer">CONTACT BOOK</router-link>
+          <router-link to="/mayrkatarn.pages/app-contact-book/" tag="span" class="pointer">CONTACT BOOK</router-link>
         </v-toolbar-title>
         
         <v-spacer></v-spacer>
