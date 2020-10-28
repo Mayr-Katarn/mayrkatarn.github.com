@@ -18,11 +18,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 _vue["default"].use(_vueRouter["default"]);
 
 var routes = [{
-  path: '/mayrkatarn.pages/app-contact-book/',
+  path: '/',
   name: 'book',
   component: _ContactBook["default"]
 }, {
-  path: '/mayrkatarn.pages/app-contact-book/contact/:id',
+  path: '/contact/:id',
   props: true,
   name: 'contact',
   component: _Contact["default"]
