@@ -9,7 +9,7 @@
         color="#fcb69f"
         dark
         shrink-on-scroll
-        src="./assets/book.jpg"
+        src="/src/assets/book.jpg"
       >
         <template v-slot:img="{ props }">
           <v-img
@@ -19,7 +19,7 @@
         </template>
 
         <v-toolbar-title>
-          <router-link to="/" tag="span" class="pointer">CONTACT BOOK</router-link>
+          <router-link to="/mayrkatarn.pages/app-contact-book/" tag="span" class="pointer">CONTACT BOOK</router-link>
         </v-toolbar-title>
         
         <v-spacer></v-spacer>
@@ -98,8 +98,8 @@ export default {
   methods: {
     // return to contact book if methods of searching are used
     toBook() {
-      if (this.$route.fullPath !== '/') {
-        this.$router.push('/')
+      if (this.$route.fullPath !== '/mayrkatarn.pages/app-contact-book/') {
+        this.$router.push('/mayrkatarn.pages/app-contact-book/')
       }
     },
 

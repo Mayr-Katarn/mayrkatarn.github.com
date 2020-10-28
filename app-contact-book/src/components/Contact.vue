@@ -97,7 +97,7 @@
             <v-btn
               color="primary"
               depressed
-              to="/"
+              to="/mayrkatarn.pages/app-contact-book/"
             >
             <v-icon class="mr-2">mdi-arrow-left-bold-circle</v-icon>
             Back
