@@ -266,7 +266,4 @@ export default {
           height: 40px
           border-radius: 5px
           background: orange
-
-
-      
 </style>
