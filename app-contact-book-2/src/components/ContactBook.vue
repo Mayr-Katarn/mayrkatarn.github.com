@@ -3,7 +3,7 @@
     <div v-for="contact of contacts" :key="contact.name" class="container__element contact">
       <div class="container__element info">
         <div class="link">
-          <router-link :to="'/contact/' + contact.id" class="link">
+          <router-link :to="'/contact-book/contact/' + contact.id" class="link">
             <h3 @click="setEditingFalse">{{ contact.name }}</h3>
           </router-link>
         </div>

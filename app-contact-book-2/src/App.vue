@@ -4,7 +4,7 @@
       <div class="header__container">
 
         <div class="header__btn">
-          <router-link :to="'/contact/' + lastId"><button class="new" @click="newContact" v-show="!isNewContact">+ New contact</button></router-link>
+          <router-link :to="'/contact-book/contact/' + lastId"><button class="new" @click="newContact" v-show="!isNewContact">+ New contact</button></router-link>
         </div>
 
         <div class="header__title">

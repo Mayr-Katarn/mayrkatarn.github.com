@@ -44,13 +44,13 @@
           <button class="btn back" @click="openModal(1)" v-if="edit">Cancel</button>
           <add-Ask-Modal v-show="cancelModal" @close="closeModal(1)" @cancel="cancel" :modal="1"></add-Ask-Modal>
 
-          <router-link to="/"><button class="btn back" v-if="!edit">Back</button></router-link>
+          <router-link to="/contact-book/"><button class="btn back" v-if="!edit">Back</button></router-link>
         </div>
       </div>
     </div>
     <div v-else class="container__box">
       <h1>Contact not found</h1>
-      <router-link to="/"><button class="btn book" v-if="!edit">Back to contact book</button></router-link>
+      <router-link to="/contact-book/"><button class="btn book" v-if="!edit">Back to contact book</button></router-link>
     </div>
   </div>
 </template>
@@ -108,7 +108,7 @@ export default {
       if (this.isNewContact){
         const index = this.$store.getters.contacts.indexOf(this.contact)
         this.contacts.splice(index, 1)
-        this.$router.push('/')
+        this.$router.push('/contact-book/')
         this.$store.dispatch('setIsNewContact', false)
         this.$store.dispatch('returnLastId')
       } else {
