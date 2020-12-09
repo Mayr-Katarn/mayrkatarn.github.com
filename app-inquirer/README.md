@@ -1,5 +1,7 @@
 # app-inquirer
 
+https://mayr-katarn.github.io/app-inquirer/
+
 ## Project setup
 ```
 npm install
