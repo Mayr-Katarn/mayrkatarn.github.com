@@ -177,7 +177,7 @@ export default {
     }
   },
   created() {
-    if (this.$route.fullPath === '/?login=false') {
+    if (this.$route.fullPath === '/app-inquirer/?login=false') {
       this.dialog = true
     }
   }

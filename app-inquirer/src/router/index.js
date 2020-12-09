@@ -10,24 +10,24 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/',
+    path: '/app-inquirer/',
     name: 'home',
     component: Home
   },
   {
-    path: '/survey/:id',
+    path: '/app-inquirer/survey/:id',
     props: true,
     name: 'survey',
     component: Survey
   },
   {
-    path: '/new',
+    path: '/app-inquirer/new',
     name: 'new',
     component: NewSurvey,
     beforeEnter: AuthGuard
   },
   {
-    path: '/my',
+    path: '/app-inquirer/my',
     props: true,
     name: 'my',
     component: MySurveys,

@@ -5,7 +5,7 @@
       <v-hover v-if="item.participation!=='hide' || item.showResultsTo!=='hide'" :key="item.id" v-slot:default="{ hover }">
         <v-card
           :elevation="hover ? 8 : 2"
-          :to="'/survey/' + item.id"
+          :to="'/app-inquirer/survey/' + item.id"
           class="mx-auto mb-4 pointer"
           color="#26c6da"
           dark

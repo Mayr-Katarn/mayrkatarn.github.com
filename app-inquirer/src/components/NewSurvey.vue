@@ -179,7 +179,7 @@ export default {
         }
         this.$store.dispatch('newSurvey', survey)
       }
-      this.$router.push('/my')
+      this.$router.push('/app-inquirer/my')
     }
   },
   computed: {

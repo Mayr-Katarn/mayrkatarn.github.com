@@ -24,21 +24,21 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 _vue["default"].use(_vueRouter["default"]);
 
 var routes = [{
-  path: '/',
+  path: '/app-inquirer/',
   name: 'home',
   component: _Home["default"]
 }, {
-  path: '/survey/:id',
+  path: '/app-inquirer/survey/:id',
   props: true,
   name: 'survey',
   component: _Survey["default"]
 }, {
-  path: '/new',
+  path: '/app-inquirer/new',
   name: 'new',
   component: _NewSurvey["default"],
   beforeEnter: _authGuard["default"]
 }, {
-  path: '/my',
+  path: '/app-inquirer/my',
   props: true,
   name: 'my',
   component: _MySurveys["default"],

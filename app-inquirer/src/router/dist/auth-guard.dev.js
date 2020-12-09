@@ -13,6 +13,6 @@ function _default(to, from, next) {
   if (_store["default"].getters.currentUser) {
     next();
   } else {
-    next('/?login=false');
+    next('/app-inquirer/?login=false');
   }
 }

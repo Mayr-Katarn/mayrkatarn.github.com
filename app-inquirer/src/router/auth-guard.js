@@ -4,6 +4,6 @@ export default function (to, from, next) {
   if (store.getters.currentUser) {
     next()
   } else {
-    next('/?login=false')
+    next('/app-inquirer/?login=false')
   }
 }

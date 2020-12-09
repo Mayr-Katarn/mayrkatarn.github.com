@@ -61,7 +61,7 @@ export default {
   },
   methods: {
     route(id) {
-      this.$router.push('/survey/' + id)
+      this.$router.push('/app-inquirer/survey/' + id)
     }
   },
   data() {
