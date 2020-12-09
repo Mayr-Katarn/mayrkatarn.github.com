@@ -122,8 +122,8 @@ export default {
     return {
       dialog: false,
       login: {
-        email: '',
-        password: ''
+        email: 'user1@test.com',
+        password: 'qweqwe'
       },
       regestration: {
         email: '',

@@ -1,12 +1,6 @@
 export default {
   state: {
-    currentUser: {
-      nickname: 'user1',
-      email: 'user1@test.com',
-      password: 'qweqwe',
-      uid: 0,
-      ownwerOf: []
-    },
+    currentUser: false,
     loginError: false,
     regError: false,
     users: [

@@ -6,13 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 exports["default"] = void 0;
 var _default = {
   state: {
-    currentUser: {
-      nickname: 'user1',
-      email: 'user1@test.com',
-      password: 'qweqwe',
-      uid: 0,
-      ownwerOf: []
-    },
+    currentUser: false,
     loginError: false,
     regError: false,
     users: [{
