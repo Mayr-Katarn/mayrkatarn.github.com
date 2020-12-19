@@ -1,4 +1,6 @@
 # app-phaser-game
+Arcade game realized on Phaser 3 framework
+
 
 
 ## Project setup & run
