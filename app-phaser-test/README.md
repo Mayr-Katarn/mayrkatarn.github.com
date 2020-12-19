@@ -2,9 +2,8 @@
 Arcade game realized on Phaser 3 framework
 
 ## GitHub Pages
-```
+
 https://mayr-katarn.github.io/app-phaser-game/
-```
 
 ## Project setup & run
 ```
